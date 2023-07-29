@@ -23,6 +23,8 @@ apt-get source nginx > /dev/null 2>&1
 cd nginx-*
 curl -sL https://raw.githubusercontent.com/kn007/patch/master/Enable_BoringSSL_OCSP.patch \
 | patch -p1 > /dev/null 2>&1
+curl -sL https://raw.githubusercontent.com/kn007/patch/master/nginx_dynamic_tls_records.patch \
+| patch -p1 > /dev/null 2>&1
 echo Fetch boringssl source code.
 mkdir debian/modules
 cd debian/modules
